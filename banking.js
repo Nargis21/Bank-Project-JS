@@ -56,7 +56,7 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     if (newWithdrawAmount < 0) {
         alert('Enter a Valid Amount!')
     }
-    else {
+    if (newWithdrawAmount > balanceTotal) {
         alert("Sorry! Your Current Balance Is Low");
     }
     // clear deposite input field
