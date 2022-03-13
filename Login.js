@@ -10,9 +10,13 @@ document.getElementById('login-btn').addEventListener('click', function () {
     if (userEmail == 'abc@gmail.com' && userPassword == 'secret') {
         window.location.href = 'banking.html'
     }
-    else {
-        alert('Please give a valid Username and password!')
+    /*  if (userEmail !== 'abc@gmail.com') {
+         document.getElementById('emailError').classList.remove('hidden')
+     }
+     if (userPassword !== 'secret') {
+         document.getElementById('passError').classList.remove('hidden')
+     } */
+    if (userEmail !== 'abc@gmail.com' || userPassword !== 'secret') {
+        document.getElementById('Error').classList.remove('hidden')
     }
-    // clear input
-    emailField.value = ''
 })
